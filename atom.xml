@@ -50,20 +50,20 @@
       <category term="IAM" scheme="http://yoursite.com/categories/IAM/"/>
     
     
-      <category term="OIDC" scheme="http://yoursite.com/tags/OIDC/"/>
-    
       <category term="ABAC" scheme="http://yoursite.com/tags/ABAC/"/>
     
       <category term="OAuth" scheme="http://yoursite.com/tags/OAuth/"/>
     
+      <category term="OIDC" scheme="http://yoursite.com/tags/OIDC/"/>
+    
   </entry>
   
   <entry>
-    <title>Welcome to IoT IAM World!</title>
+    <title>IoT IAM 浅谈</title>
     <link href="http://yoursite.com/2016/05/24/2016-05-23-iot-iam/"/>
     <id>http://yoursite.com/2016/05/24/2016-05-23-iot-iam/</id>
     <published>2016-05-24T08:53:15.000Z</published>
-    <updated>2017-02-04T13:16:53.008Z</updated>
+    <updated>2017-02-04T13:24:28.659Z</updated>
     
     <content type="html"><![CDATA[<h2 id="Overview-of-Identity-Management-for-the-IoT"><a href="#Overview-of-Identity-Management-for-the-IoT" class="headerlink" title="Overview of Identity Management for the IoT"></a>Overview of Identity Management for the IoT</h2><p>Cited from <a href="https://www.unboundid.com/overview-identity-management-iot" target="_blank" rel="external">Overview: Identity Management for the Internet of Things by UnboundID</a></p>
 <p>IoT IAM Requirements:</p>
@@ -123,9 +123,9 @@
       <category term="IAM" scheme="http://yoursite.com/categories/IAM/"/>
     
     
-      <category term="ABAC" scheme="http://yoursite.com/tags/ABAC/"/>
-    
       <category term="IoT" scheme="http://yoursite.com/tags/IoT/"/>
+    
+      <category term="ABAC" scheme="http://yoursite.com/tags/ABAC/"/>
     
       <category term="UMA" scheme="http://yoursite.com/tags/UMA/"/>
     
