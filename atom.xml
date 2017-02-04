@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>JeffZhu.me</title>
+  
+  <link href="/atom.xml" rel="self"/>
+  
+  <link href="http://yoursite.com/"/>
+  <updated>2016-06-06T05:27:40.782Z</updated>
+  <id>http://yoursite.com/</id>
+  
+  <author>
+    <name>Jeff Zhu (杰夫朱)</name>
+    
+  </author>
+  
+  <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>ABAC vs OAuth vs OIDC</title>
+    <link href="http://yoursite.com/2016/06/03/2016-06-03-ABAC-vs-OAUTH/"/>
+    <id>http://yoursite.com/2016/06/03/2016-06-03-ABAC-vs-OAUTH/</id>
+    <published>2016-06-03T08:53:15.000Z</published>
+    <updated>2016-06-06T05:27:40.782Z</updated>
+    
+    <content type="html"><![CDATA[<p>We may be confused by the concept of ABAC and OAuth2. We don’t know when ABAC or OAuth2 can be applied.</p>
+<p>I think this question can be translated into ‘what kind of problems OAuth and ABAC can solve’. Now I would like to share my opinions.</p>
+<p>ABAC and OAuth are 2 different access control solutions, but they are not in the same dimension: ABAC is a methodology and OAuth2 is a RFC protocol. But in general, they can be used to answer the question:</p>
+<blockquote>
+<p>Can A do_X on B ?</p>
+</blockquote>
+<p>In OAuth, A is the ‘client’, it can be a native app or a backend service, but in general it should be a NPE (None Person Entity). B is the ‘resource’, which should belongs to the resource owner. </p>
+<p>In ABAC, either A can be either a NPE or a person. And B could be everything without any context constraint.</p>
+<p>According to above analysis, we can come to below conclusions:</p>
+<ul>
+<li>ABAC is much more generic than OAuth; </li>
+<li>When the access request subject is a person, then only ABAC can be applied to;</li>
+<li>But OAuth is simpler than ABAC. For the access control of machine-to-machine/service-to-service, we can use OAuth2 to make it simple;</li>
+</ul>
+<p>For OIDC, it is a profile of OAuth. The main design purpose of OIDC is to provide the standard authentication flow and also an endpoint to fetch the userinfo.</p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;We may be confused by the concept of ABAC and OAuth2. We don’t know when ABAC or OAuth2 can be applied.&lt;/p&gt;
+&lt;p&gt;I think this question can 
+    
+    </summary>
+    
+      <category term="IAM" scheme="http://yoursite.com/categories/IAM/"/>
+    
+    
+      <category term="OIDC" scheme="http://yoursite.com/tags/OIDC/"/>
+    
+      <category term="ABAC" scheme="http://yoursite.com/tags/ABAC/"/>
+    
+      <category term="OAuth" scheme="http://yoursite.com/tags/OAuth/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Welcome to IoT IAM World!</title>
+    <link href="http://yoursite.com/2016/05/24/2016-05-23-iot-iam/"/>
+    <id>http://yoursite.com/2016/05/24/2016-05-23-iot-iam/</id>
+    <published>2016-05-24T08:53:15.000Z</published>
+    <updated>2016-06-06T05:27:40.782Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="Overview-of-Identity-Management-for-the-IoT"><a href="#Overview-of-Identity-Management-for-the-IoT" class="headerlink" title="Overview of Identity Management for the IoT"></a>Overview of Identity Management for the IoT</h2><p>Cited from <a href="https://www.unboundid.com/overview-identity-management-iot" target="_blank" rel="external">Overview: Identity Management for the Internet of Things by UnboundID</a></p>
+<p>IoT IAM Requirements:</p>
+<ul>
+<li><strong>Adaptive Authentication</strong>. 认证的手段会随着人的身份、context、设备、usecase等因素而变化。</li>
+<li><strong>Privacy and Preference Management</strong>. IoT IAM可以将来自不同interaction point的用户偏好信息进行汇集，这样可以提高用户的忠诚度和保持用户在不同channel的体验一致性。</li>
+<li><strong>Policy-Based Data Access Goverance</strong>. IoT IAM可以提供更细粒度的控制，以及基于环境因素以及上下文的控制。</li>
+<li><strong>High Volume Scale</strong>.</li>
+</ul>
+<h2 id="User-Managed-Access-UMA"><a href="#User-Managed-Access-UMA" class="headerlink" title="User Managed Access (UMA)"></a>User Managed Access (UMA)</h2><blockquote>
+<p>User-Managed Access (UMA) is a profile of OAuth 2.0 [RFC6749]. UMA defines how resource owners can control protected-resource access by clients operated by arbitrary requesting parties, where the resources reside on any number of resource servers, and where a centralized authorization server governs access based on resource owner policies. Resource owners configure authorization servers with access policies that serve as asynchronous authorization grants.   —  UMA Working group</p>
+</blockquote>
+<p><img src="http://kantarainitiative.org/confluence/download/attachments/17760302/UMA-logo.png" alt="alt text" title="UMA"></p>
+<h4 id="Official-Website"><a href="#Official-Website" class="headerlink" title="Official Website"></a><a href="https://kantarainitiative.org/confluence/display/uma/Home" target="_blank" rel="external">Official Website</a></h4><h4 id="Spec-v1-0-1"><a href="#Spec-v1-0-1" class="headerlink" title="Spec v1.0.1"></a><a href="https://docs.kantarainitiative.org/uma/rec-uma-core.html" target="_blank" rel="external">Spec v1.0.1</a></h4><h4 id="Use-Case"><a href="#Use-Case" class="headerlink" title="Use Case"></a>Use Case</h4><ul>
+<li><a href="https://kantarainitiative.org/confluence/display/uma/Case+Study%3A+IoT+-+Intelligent+Refrigerated+Shipping+Containers" target="_blank" rel="external">Ship Management</a></li>
+<li><a href="https://forgerock.org/openuma/" target="_blank" rel="external">Course Registration</a></li>
+<li><a href="http://kantarainitiative.org/confluence/display/uma/Case+Studies?src=breadcrumbs-parent" target="_blank" rel="external">Other Use Case</a></li>
+</ul>
+<h4 id="Implementations"><a href="#Implementations" class="headerlink" title="Implementations"></a>Implementations</h4><ul>
+<li><a href="https://forgerock.org/openuma/" target="_blank" rel="external">ForgeRock</a></li>
+</ul>
+<h2 id="Attribute-Based-Access-Control"><a href="#Attribute-Based-Access-Control" class="headerlink" title="Attribute Based Access Control"></a>Attribute Based Access Control</h2><blockquote>
+<p>Attribute Based Access Control (ABAC): An access control method where subject requests to perform operations on objects are granted or denied based on assigned attributes of the subject, assigned attributes of the object, environment conditions, and a set of policies that are specified in terms of those attributes and conditions.    –   NIST</p>
+</blockquote>
+<p><img src="https://upload.wikimedia.org/wikipedia/commons/f/f2/XACML_Architecture_%26_Flow.png" alt="alt text" title="xacml"></p>
+<h2 id="eXtensible-Access-Control-Markup-Language-XACML"><a href="#eXtensible-Access-Control-Markup-Language-XACML" class="headerlink" title="eXtensible Access Control Markup Language (XACML)"></a>eXtensible Access Control Markup Language (XACML)</h2><blockquote>
+<p>XACML stands for “eXtensible Access Control Markup Language”. The standard defines a declarative fine-grained, attribute-based access control policy language, an architecture, and a processing model describing how to evaluate access requests according to the rules defined in policies.<br>As a published standard specification, one of the goals of XACML is to promote common terminology and interoperability between access control implementations by multiple vendors. XACML is primarily an Attribute Based Access Control system (ABAC), where attributes (bits of data) associated with a user or action or resource are inputs into the decision of whether a given user may access a given resource in a particular way. Role-based access control (RBAC) can also be implemented in XACML as a specialization of ABAC.    — Wikipedia</p>
+</blockquote>
+<h4 id="Official-Website-1"><a href="#Official-Website-1" class="headerlink" title="Official Website"></a><a href="https://www.oasis-open.org/committees/tc_home.php?wg_abbrev=xacml" target="_blank" rel="external">Official Website</a></h4><h4 id="101"><a href="#101" class="headerlink" title="101"></a>101</h4><ul>
+<li><a href="http://security.stackexchange.com/questions/54379/looking-for-approach-to-implement-attribute-based-access-control-abac" target="_blank" rel="external">Axiomatics关于ABAC/XACML的入门材料</a></li>
+</ul>
+<h4 id="Spec-v3-0"><a href="#Spec-v3-0" class="headerlink" title="Spec v3.0"></a>Spec v3.0</h4><ul>
+<li><a href="http://docs.oasis-open.org/xacml/3.0/xacml-3.0-core-spec-os-en.html" target="_blank" rel="external">XACML 3 Core</a></li>
+<li><a href="http://docs.oasis-open.org/xacml/xacml-rest/v1.0/cs02/xacml-rest-v1.0-cs02.pdf" target="_blank" rel="external">Rest Profile</a></li>
+<li><a href="http://docs.oasis-open.org/xacml/xacml-json-http/v1.0/csprd03/xacml-json-http-v1.0-csprd03.pdf" target="_blank" rel="external">JSON Profile</a></li>
+</ul>
+<h4 id="Implementations-1"><a href="#Implementations-1" class="headerlink" title="Implementations"></a>Implementations</h4><ul>
+<li><a href="https://github.com/apache/incubator-openaz" target="_blank" rel="external">Apache OpenAZ</a></li>
+<li><a href="https://github.com/wso2/balana" target="_blank" rel="external">WSO2 Blana</a></li>
+</ul>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;h2 id=&quot;Overview-of-Identity-Management-for-the-IoT&quot;&gt;&lt;a href=&quot;#Overview-of-Identity-Management-for-the-IoT&quot; class=&quot;headerlink&quot; title=&quot;Overvi
+    
+    </summary>
+    
+      <category term="IAM" scheme="http://yoursite.com/categories/IAM/"/>
+    
+    
+      <category term="ABAC" scheme="http://yoursite.com/tags/ABAC/"/>
+    
+      <category term="IoT" scheme="http://yoursite.com/tags/IoT/"/>
+    
+      <category term="UMA" scheme="http://yoursite.com/tags/UMA/"/>
+    
+  </entry>
+  
+</feed>
