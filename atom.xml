@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2016-06-06T05:27:40.782Z</updated>
+  <updated>2017-02-04T13:19:51.175Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -16,14 +16,15 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>ABAC vs OAuth vs OIDC</title>
+    <title>Attribute Based Access Control (ABAC) vs OAuth</title>
     <link href="http://yoursite.com/2016/06/03/2016-06-03-ABAC-vs-OAUTH/"/>
     <id>http://yoursite.com/2016/06/03/2016-06-03-ABAC-vs-OAUTH/</id>
     <published>2016-06-03T08:53:15.000Z</published>
-    <updated>2016-06-06T05:27:40.782Z</updated>
+    <updated>2017-02-04T13:19:51.175Z</updated>
     
-    <content type="html"><![CDATA[<p>We may be confused by the concept of ABAC and OAuth2. We don’t know when ABAC or OAuth2 can be applied.</p>
+    <content type="html"><![CDATA[<p>We may be confused by the concept of ABAC (Attribute Based Access Control) and OAuth2. We don’t know when ABAC or OAuth2 can be applied.</p>
 <p>I think this question can be translated into ‘what kind of problems OAuth and ABAC can solve’. Now I would like to share my opinions.</p>
+<a id="more"></a>
 <p>ABAC and OAuth are 2 different access control solutions, but they are not in the same dimension: ABAC is a methodology and OAuth2 is a RFC protocol. But in general, they can be used to answer the question:</p>
 <blockquote>
 <p>Can A do_X on B ?</p>
@@ -41,17 +42,17 @@
     
     <summary type="html">
     
-      &lt;p&gt;We may be confused by the concept of ABAC and OAuth2. We don’t know when ABAC or OAuth2 can be applied.&lt;/p&gt;
-&lt;p&gt;I think this question can 
+      &lt;p&gt;We may be confused by the concept of ABAC (Attribute Based Access Control) and OAuth2. We don’t know when ABAC or OAuth2 can be applied.&lt;/p&gt;
+&lt;p&gt;I think this question can be translated into ‘what kind of problems OAuth and ABAC can solve’. Now I would like to share my opinions.&lt;/p&gt;
     
     </summary>
     
       <category term="IAM" scheme="http://yoursite.com/categories/IAM/"/>
     
     
-      <category term="ABAC" scheme="http://yoursite.com/tags/ABAC/"/>
-    
       <category term="OIDC" scheme="http://yoursite.com/tags/OIDC/"/>
+    
+      <category term="ABAC" scheme="http://yoursite.com/tags/ABAC/"/>
     
       <category term="OAuth" scheme="http://yoursite.com/tags/OAuth/"/>
     
@@ -62,7 +63,7 @@
     <link href="http://yoursite.com/2016/05/24/2016-05-23-iot-iam/"/>
     <id>http://yoursite.com/2016/05/24/2016-05-23-iot-iam/</id>
     <published>2016-05-24T08:53:15.000Z</published>
-    <updated>2016-06-06T05:27:40.782Z</updated>
+    <updated>2017-02-04T13:16:53.008Z</updated>
     
     <content type="html"><![CDATA[<h2 id="Overview-of-Identity-Management-for-the-IoT"><a href="#Overview-of-Identity-Management-for-the-IoT" class="headerlink" title="Overview of Identity Management for the IoT"></a>Overview of Identity Management for the IoT</h2><p>Cited from <a href="https://www.unboundid.com/overview-identity-management-iot" target="_blank" rel="external">Overview: Identity Management for the Internet of Things by UnboundID</a></p>
 <p>IoT IAM Requirements:</p>
@@ -72,6 +73,7 @@
 <li><strong>Policy-Based Data Access Goverance</strong>. IoT IAM可以提供更细粒度的控制，以及基于环境因素以及上下文的控制。</li>
 <li><strong>High Volume Scale</strong>.</li>
 </ul>
+<a id="more"></a>
 <h2 id="User-Managed-Access-UMA"><a href="#User-Managed-Access-UMA" class="headerlink" title="User Managed Access (UMA)"></a>User Managed Access (UMA)</h2><blockquote>
 <p>User-Managed Access (UMA) is a profile of OAuth 2.0 [RFC6749]. UMA defines how resource owners can control protected-resource access by clients operated by arbitrary requesting parties, where the resources reside on any number of resource servers, and where a centralized authorization server governs access based on resource owner policies. Resource owners configure authorization servers with access policies that serve as asynchronous authorization grants.   —  UMA Working group</p>
 </blockquote>
@@ -107,16 +109,23 @@
     
     <summary type="html">
     
-      &lt;h2 id=&quot;Overview-of-Identity-Management-for-the-IoT&quot;&gt;&lt;a href=&quot;#Overview-of-Identity-Management-for-the-IoT&quot; class=&quot;headerlink&quot; title=&quot;Overvi
+      &lt;h2 id=&quot;Overview-of-Identity-Management-for-the-IoT&quot;&gt;&lt;a href=&quot;#Overview-of-Identity-Management-for-the-IoT&quot; class=&quot;headerlink&quot; title=&quot;Overview of Identity Management for the IoT&quot;&gt;&lt;/a&gt;Overview of Identity Management for the IoT&lt;/h2&gt;&lt;p&gt;Cited from &lt;a href=&quot;https://www.unboundid.com/overview-identity-management-iot&quot;&gt;Overview: Identity Management for the Internet of Things by UnboundID&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;IoT IAM Requirements:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Adaptive Authentication&lt;/strong&gt;. 认证的手段会随着人的身份、context、设备、usecase等因素而变化。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Privacy and Preference Management&lt;/strong&gt;. IoT IAM可以将来自不同interaction point的用户偏好信息进行汇集，这样可以提高用户的忠诚度和保持用户在不同channel的体验一致性。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Policy-Based Data Access Goverance&lt;/strong&gt;. IoT IAM可以提供更细粒度的控制，以及基于环境因素以及上下文的控制。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;High Volume Scale&lt;/strong&gt;.&lt;/li&gt;
+&lt;/ul&gt;
     
     </summary>
     
       <category term="IAM" scheme="http://yoursite.com/categories/IAM/"/>
     
     
-      <category term="IoT" scheme="http://yoursite.com/tags/IoT/"/>
-    
       <category term="ABAC" scheme="http://yoursite.com/tags/ABAC/"/>
+    
+      <category term="IoT" scheme="http://yoursite.com/tags/IoT/"/>
     
       <category term="UMA" scheme="http://yoursite.com/tags/UMA/"/>
     
