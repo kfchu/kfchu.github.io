@@ -9,7 +9,7 @@
   <id>http://yoursite.com/</id>
   
   <author>
-    <name>Jeff Zhu (杰夫朱)</name>
+    <name>杰夫朱 (Jeff Zhu)</name>
     
   </author>
   
@@ -49,9 +49,9 @@
       <category term="IAM" scheme="http://yoursite.com/categories/IAM/"/>
     
     
-      <category term="OIDC" scheme="http://yoursite.com/tags/OIDC/"/>
-    
       <category term="ABAC" scheme="http://yoursite.com/tags/ABAC/"/>
+    
+      <category term="OIDC" scheme="http://yoursite.com/tags/OIDC/"/>
     
       <category term="OAuth" scheme="http://yoursite.com/tags/OAuth/"/>
     
@@ -114,9 +114,9 @@
       <category term="IAM" scheme="http://yoursite.com/categories/IAM/"/>
     
     
-      <category term="ABAC" scheme="http://yoursite.com/tags/ABAC/"/>
-    
       <category term="IoT" scheme="http://yoursite.com/tags/IoT/"/>
+    
+      <category term="ABAC" scheme="http://yoursite.com/tags/ABAC/"/>
     
       <category term="UMA" scheme="http://yoursite.com/tags/UMA/"/>
     
